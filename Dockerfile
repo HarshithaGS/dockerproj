@@ -4,7 +4,7 @@ FROM python:3.7.3-stretch
 WORKDIR /app
 
 # Copy source code to working directory
-COPY . flask_app/web.py /app/
+COPY . app.py /app/
 COPY . nlib /app/
 
 # Install packages from requirements.txt
@@ -16,4 +16,4 @@ RUN pip install --upgrade pip &&\
 EXPOSE 80
 
 # Run app.py at container launch
-CMD ["python", "web.py"]
+CMD ["python", "app.py"]
